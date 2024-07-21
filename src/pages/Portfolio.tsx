@@ -1,0 +1,19 @@
+import React from "react";
+import ProjectList from "../components/portfolio/ProjectList";
+import projects from "../data/projects";
+import { Background } from "../components/global/Background";
+import { Header } from "../components/nav/Header";
+import { setPageTitle } from "../util/setPageTitle";
+
+const Portfolio: React.FC = () => {
+  setPageTitle("Portfolio");
+  return (
+    <div className="-z-20 flex min-h-screen flex-col items-center justify-start gap-16 bg-none p-4 font-formula lg:p-16">
+      <Background />
+      <Header />
+      <ProjectList projects={projects} />
+    </div>
+  );
+};
+
+export default Portfolio;
