@@ -23,7 +23,17 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
   const timerStartRef = useRef<number>(Date.now());
   const navigate = useNavigate();
 
+  function setupSkipAnimation(skipCallback: () => void): void {
+    const handleKeyPress = () => {
+      skipCallback();
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+  }
+
   useEffect(() => {
+    setupSkipAnimation(skipAnimation);
     const windowHeight = window.innerHeight;
     const startPosition = (windowHeight * 2.5) / 3;
     setContainerOffset(startPosition);
@@ -176,9 +186,10 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
       {isAnimating && (
         <button
           onClick={skipAnimation}
-          className="bg-blood fixed bottom-4 right-4 z-10 rounded px-5 py-3 text-sm text-white transition-colors duration-300 hover:bg-error"
+          className="bg-blood fixed bottom-4 right-4 z-10 rounded px-5 py-3 text-sm text-white transition-colors duration-100 hover:bg-error"
         >
-          Skip
+          <p className="inline lg:hidden">Skip</p>
+          <p className="hidden lg:inline">Skip (or press any key)</p>
         </button>
       )}
     </div>
