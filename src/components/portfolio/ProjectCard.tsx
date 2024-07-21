@@ -7,7 +7,11 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="group relative overflow-hidden rounded-sm border border-dashed border-black bg-black bg-opacity-10 shadow-lg backdrop-blur-lg duration-300 hover:scale-[102%] hover:bg-[#FC4C4E]">
+    <a
+      href={project.url}
+      target="_blank"
+      className="group relative overflow-hidden rounded-sm border border-dashed border-black bg-black bg-opacity-10 shadow-lg backdrop-blur-lg duration-300 hover:scale-[102%] hover:bg-[#FC4C4E]"
+    >
       <div className="flex flex-col gap-2 p-2">
         <h3 className="w-full text-xl font-medium text-base-950 duration-200 group-hover:text-base-50">
           {project.name}
@@ -34,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <p className="text-sm mt-2">{project.subtitle}</p>
               )}
             </div> */}
-        <a
+        {/* <a
           href={project.url}
           target="_blank"
           rel="noopener noreferrer"
@@ -44,9 +48,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             src="/opennew.svg"
             className="invert"
           />
-        </a>
+        </a> */}
       </div>
-    </div>
+    </a>
   );
 };
 

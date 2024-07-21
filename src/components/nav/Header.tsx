@@ -33,7 +33,7 @@ export const Header = () => {
             hoverColor="#FC4C4E"
           />
           <NavButton
-            path="/blog"
+            path="https://medium.com/@chriswmccully"
             label="BLOG"
             hoverColor="#FC4C4E"
           />
