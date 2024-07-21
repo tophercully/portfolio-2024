@@ -7,6 +7,7 @@ import "./output.css";
 import Portfolio from "./pages/Portfolio.tsx";
 import CVPage from "./pages/cv.tsx";
 import { Background } from "./components/global/Background.tsx";
+import About from "./pages/About.tsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/cv",
     element: <CVPage />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
 ]);
 
