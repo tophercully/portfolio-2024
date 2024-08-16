@@ -2,7 +2,7 @@ import { Project } from "../typeinterfaces";
 
 export default [
   {
-    name: "Snippp",
+    name: "Snippp.io",
     url: "https://snippp.io",
     image: "/snippets.png",
     projectKey: "snippp",
