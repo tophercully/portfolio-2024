@@ -22,8 +22,8 @@ function App() {
     <>
       <TypingAnimation
         text={textBlocks}
-        typingSpeed={25}
-        pauseDuration={600}
+        typingSpeed={20}
+        pauseDuration={400}
       />
     </>
   );

@@ -5,7 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./output.css";
 import Portfolio from "./pages/Portfolio.tsx";
-
+import { Analytics } from "@vercel/analytics/react";
 import { Background } from "./components/global/Background.tsx";
 import About from "./pages/About.tsx";
 import CVPage from "./pages/CV.tsx";
@@ -42,6 +42,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
+    <Analytics />
     <RouterProvider router={router} />
   </React.StrictMode>,
 );
