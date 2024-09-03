@@ -162,7 +162,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
         >
           <div
             ref={textContainerRef}
-            className="font-montrealmono w-full px-4 md:px-8 md:text-2xl lg:px-16"
+            className="w-full px-4 font-montrealmono md:px-8 md:text-2xl lg:px-16"
           >
             {displayedText.map((block, index) => (
               <p
@@ -186,7 +186,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
       {isAnimating && (
         <button
           onClick={skipAnimation}
-          className="bg-blood fixed bottom-4 right-4 z-10 rounded px-5 py-3 text-sm text-white transition-colors duration-100 hover:bg-error"
+          className="fixed bottom-4 right-4 z-10 rounded bg-blood px-5 py-3 text-sm text-white transition-colors duration-100 hover:bg-error"
         >
           <p className="inline lg:hidden">Skip</p>
           <p className="hidden lg:inline">Skip (or press any key)</p>
