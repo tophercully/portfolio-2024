@@ -8,7 +8,7 @@ import { setPageTitle } from "../util/setPageTitle";
 const Portfolio: React.FC = () => {
   setPageTitle("Portfolio");
   return (
-    <div className="-z-20 flex min-h-screen flex-col items-center justify-start gap-8 bg-none p-4 font-formula lg:gap-16 lg:p-16">
+    <div className="font-neuehaas -z-20 flex min-h-screen flex-col items-center justify-start gap-8 bg-none p-4 lg:gap-16 lg:p-16">
       <Background />
       <Header />
       <ProjectList projects={projects} />

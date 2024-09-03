@@ -5,9 +5,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./output.css";
 import Portfolio from "./pages/Portfolio.tsx";
-import CVPage from "./pages/cv.tsx";
+
 import { Background } from "./components/global/Background.tsx";
 import About from "./pages/About.tsx";
+import CVPage from "./pages/CV.tsx";
+import SnipppWriteup from "./pages/projects/SnipppWriteup.tsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,11 @@ const router = createBrowserRouter([
     path: "/portfolio",
     element: <Portfolio />,
   },
+  {
+    path: "/portfolio/snippp",
+    element: <SnipppWriteup />,
+  },
+
   {
     path: "/cv",
     element: <CVPage />,

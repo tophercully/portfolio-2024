@@ -8,7 +8,7 @@ const ProfileCard = () => {
             
             I like solving problems, and I'm always looking for new ways to make life easier, faster, and more beautiful.
             
-            I've worked in visual media for 10 years, including film production, fashion photography, and graphics programming.`;
+            I've worked in visual media for 11 years, including film production, fashion photography, and graphics programming.`;
 
   return (
     <div className="flex w-full flex-col gap-4 rounded-sm bg-base-50 p-4 shadow-md dark:bg-base-950 dark:text-base-50">

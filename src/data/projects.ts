@@ -3,7 +3,7 @@ import { Project } from "../typeinterfaces";
 export default [
   {
     name: "Snippp.io",
-    url: "https://snippp.io",
+    url: "/portfolio/snippp",
     image: "/snippets.png",
     projectKey: "snippp",
     desc: "Website",

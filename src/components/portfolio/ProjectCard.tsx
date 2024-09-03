@@ -9,7 +9,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <a
       href={project.url}
-      target="_blank"
+      target={project.url.startsWith("/") ? "" : "_blank"}
       className="group relative overflow-hidden rounded-sm border border-dashed border-black bg-white bg-opacity-50 shadow-lg backdrop-blur-lg duration-300 hover:scale-[102%] hover:bg-[#FC4C4E]"
     >
       <div className="flex flex-col gap-2 p-2">

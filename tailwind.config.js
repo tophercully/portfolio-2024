@@ -14,7 +14,6 @@ export default {
       },
       colors: {
         base: {
-          DEFAULT: "#767676",
           50: "#FFFFFF",
           100: "#FAFAFA",
           150: "#eeeeee",
@@ -51,6 +50,7 @@ export default {
       fontFamily: {
         montreal: ['"PP Neue Montreal"', "sans-serif"],
         montrealmono: ['"PP Neue Montreal Mono"', "monotype"],
+        neuehaas: ['"Neue Haas Display"', "sans-serif"],
         satoshi: [
           "Satoshi",
           "Roboto",
