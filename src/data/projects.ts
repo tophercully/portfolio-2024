@@ -2,6 +2,14 @@ import { Project } from "../typeinterfaces";
 
 export default [
   {
+    name: "NoiseToNoise",
+    url: "https://noise-to-noise.vercel.app/",
+    image: "/noisetonoise.png",
+    projectKey: "noisetonoise",
+    desc: "Website",
+    role: "Full-Stack Developer",
+  },
+  {
     name: "Snippp.io",
     url: "/portfolio/snippp",
     image: "/snippets.png",

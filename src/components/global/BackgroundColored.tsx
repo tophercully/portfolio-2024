@@ -2,30 +2,39 @@ import React, { useState, useEffect } from "react";
 import { ri, rv } from "../../util/random";
 
 interface Orb {
-  xA: number;
-  yA: number;
-  xB: number;
-  yB: number;
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+  x3: number;
+  y3: number;
+  x4: number;
+  y4: number;
   blur: number;
   color: string;
   size: number;
-  animationDelay: string;
+  animationDuration: number;
 }
 
 export const BackgroundColored: React.FC = () => {
   const [orbs, setOrbs] = useState<Orb[]>([]);
   const baseOrbSize = ((window.innerWidth + window.innerHeight) / 2) * 0.004;
   const colors = ["bg-blood"];
+
   useEffect(() => {
     const newOrbs: Orb[] = Array.from({ length: 5 }, () => ({
-      xA: rv(-30, 130),
-      yA: rv(-30, 130),
-      xB: rv(-30, 130),
-      yB: rv(-30, 130),
-      blur: 20, //rv(50, 60), //rv(200, 250), //150, 250
+      x1: rv(-30, 130),
+      y1: rv(-30, 130),
+      x2: rv(-30, 130),
+      y2: rv(-30, 130),
+      x3: rv(-30, 130),
+      y3: rv(-30, 130),
+      x4: rv(-30, 130),
+      y4: rv(-30, 130),
+      blur: rv(20, 60),
       color: colors[ri(0, colors.length - 1)],
       size: rv(baseOrbSize, baseOrbSize * 5),
-      animationDelay: `${rv(0, 20)}s`,
+      animationDuration: rv(30, 60),
     }));
     setOrbs(newOrbs);
   }, []);
@@ -33,7 +42,20 @@ export const BackgroundColored: React.FC = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden bg-base-50">
       {orbs.map((orb, index) => {
-        const { xA, yA, xB, yB, blur, size, color, animationDelay } = orb;
+        const {
+          x1,
+          y1,
+          x2,
+          y2,
+          x3,
+          y3,
+          x4,
+          y4,
+          blur,
+          size,
+          color,
+          animationDuration,
+        } = orb;
         return (
           <div
             key={index}
@@ -42,17 +64,17 @@ export const BackgroundColored: React.FC = () => {
               width: `${size}rem`,
               height: `${size}rem`,
               filter: `blur(${blur}px)`,
-              left: `${xA}vw`,
-              top: `${yA}vh`,
-              transition: "all 0.5s ease-in-out",
-              animation: `float 40s ease-in-out infinite ${animationDelay}`,
+              animation: `float-${index} ${animationDuration}s ease-in-out infinite`,
             }}
           >
             <style>
               {`
-                @keyframes float {
-                  0%, 100% { transform: translate(0, 0); }
-                  50% { transform: translate(calc(${xB - xA}vw), calc(${yB - yA}vh)); }
+                @keyframes float-${index} {
+                  0% { transform: translate(${x1}vw, ${y1}vh); }
+                  25% { transform: translate(${x2}vw, ${y2}vh); }
+                  50% { transform: translate(${x3}vw, ${y3}vh); }
+                  75% { transform: translate(${x4}vw, ${y4}vh); }
+                  100% { transform: translate(${x1}vw, ${y1}vh); }
                 }
               `}
             </style>
