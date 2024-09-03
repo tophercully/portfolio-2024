@@ -10,8 +10,7 @@ import { Background } from "./components/global/Background.tsx";
 import About from "./pages/About.tsx";
 
 import SnipppWriteup from "./pages/projects/SnipppWriteup.tsx";
-import { CV } from "./pages/CV.tsx";
-
+import { CV } from "./pages/CVPage.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
