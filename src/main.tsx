@@ -8,8 +8,9 @@ import Portfolio from "./pages/Portfolio.tsx";
 import { Analytics } from "@vercel/analytics/react";
 import { Background } from "./components/global/Background.tsx";
 import About from "./pages/About.tsx";
-import CVPage from "./pages/CV.tsx";
+
 import SnipppWriteup from "./pages/projects/SnipppWriteup.tsx";
+import { CV } from "./pages/CV.tsx";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
 
   {
     path: "/cv",
-    element: <CVPage />,
+    element: <CV />,
   },
   {
     path: "/about",
