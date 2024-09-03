@@ -1,3 +1,4 @@
+import { Background } from "./components/global/Background";
 import TypingAnimation from "./components/LandingAnimation";
 import { setPageTitle } from "./util/setPageTitle";
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+      <Background />
       <TypingAnimation
         text={textBlocks}
         typingSpeed={20}

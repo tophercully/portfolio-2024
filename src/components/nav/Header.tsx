@@ -10,18 +10,18 @@ export const Header = () => {
         >
           CHRIS MCCULLY
         </a>
-        <span className="font-montrealmono flex flex-wrap text-lg lg:hidden lg:w-1/3">
+        <span className="flex flex-wrap font-montrealmono text-lg lg:hidden lg:w-1/3">
           <span className="mr-2">{`WEB DEVELOPER &`}</span>
           <span>{`GRAPHICS PROGRAMMER`}</span>
         </span>
       </div>
-      <div className="px-auto font-montrealmono mb-10 grid h-fit w-full grid-cols-1 grid-rows-2 gap-8 lg:grid-cols-3 lg:grid-rows-1">
+      <div className="px-auto mb-10 grid h-fit w-full grid-cols-1 grid-rows-2 gap-8 font-montrealmono lg:grid-cols-3 lg:grid-rows-1">
         <div className="hidden w-full flex-col gap-2 lg:flex">
           {/* <span className="flex w-full justify-between pt-2 font-medium tracking-wide">
             <p>WEB DEVELOPER & GRAPHICS PROGRAMMER</p>
             <p className="opacity-25">|</p>
           </span> */}
-          <span className="font-montrealmono flex flex-wrap text-lg">
+          <span className="flex flex-wrap font-montrealmono text-lg">
             <span className="mr-2">{`WEB DEVELOPER &`}</span>
             <span>{`GRAPHICS PROGRAMMER`}</span>
           </span>
