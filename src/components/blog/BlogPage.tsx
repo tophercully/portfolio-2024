@@ -10,7 +10,7 @@ interface BlogPageProps {
 }
 
 const BlogPage: React.FC<BlogPageProps> = ({ article }) => {
-  setPageTitle("Snippp Project Overview");
+  setPageTitle(article.title);
   const [activeSection, setActiveSection] = useState("");
   const articleSections = article.content;
 

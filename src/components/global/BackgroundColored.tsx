@@ -14,17 +14,17 @@ interface Orb {
 
 export const BackgroundColored: React.FC = () => {
   const [orbs, setOrbs] = useState<Orb[]>([]);
-  const baseOrbSize = ((window.innerWidth + window.innerHeight) / 2) * 0.006;
-  const colors = ["bg-special"];
+  const baseOrbSize = ((window.innerWidth + window.innerHeight) / 2) * 0.004;
+  const colors = ["bg-blood"];
   useEffect(() => {
-    const newOrbs: Orb[] = Array.from({ length: 10 }, () => ({
+    const newOrbs: Orb[] = Array.from({ length: 5 }, () => ({
       xA: rv(-30, 130),
       yA: rv(-30, 130),
       xB: rv(-30, 130),
       yB: rv(-30, 130),
-      blur: rv(200, 250), //150, 250
+      blur: 20, //rv(50, 60), //rv(200, 250), //150, 250
       color: colors[ri(0, colors.length - 1)],
-      size: rv(baseOrbSize, baseOrbSize * 3),
+      size: rv(baseOrbSize, baseOrbSize * 5),
       animationDelay: `${rv(0, 20)}s`,
     }));
     setOrbs(newOrbs);
