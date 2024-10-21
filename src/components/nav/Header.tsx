@@ -2,7 +2,7 @@ import { NavButton } from "./NavButton";
 import { NavLink } from "./NavLink";
 export const Header = () => {
   return (
-    <div className="flex w-full flex-col gap-8 py-2 text-xs font-normal backdrop-blur-lg lg:gap-2">
+    <div className="flex w-full flex-col gap-8 py-2 text-xs font-normal lg:gap-2">
       <div className="flex flex-col gap-2">
         <a
           className="w-fit text-3xl font-bold hover:bg-[#FC4C4E] hover:text-base-50"

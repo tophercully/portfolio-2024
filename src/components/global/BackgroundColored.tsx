@@ -23,18 +23,18 @@ export const BackgroundColored: React.FC = () => {
 
   useEffect(() => {
     const newOrbs: Orb[] = Array.from({ length: 5 }, () => ({
-      x1: rv(-30, 130),
-      y1: rv(-30, 130),
-      x2: rv(-30, 130),
-      y2: rv(-30, 130),
-      x3: rv(-30, 130),
-      y3: rv(-30, 130),
-      x4: rv(-30, 130),
-      y4: rv(-30, 130),
+      x1: rv(-50, 150),
+      y1: rv(-50, 150),
+      x2: rv(-50, 150),
+      y2: rv(-50, 150),
+      x3: rv(-50, 150),
+      y3: rv(-50, 150),
+      x4: rv(-50, 150),
+      y4: rv(-50, 150),
       blur: rv(20, 60),
       color: colors[ri(0, colors.length - 1)],
       size: rv(baseOrbSize, baseOrbSize * 5),
-      animationDuration: rv(30, 60),
+      animationDuration: rv(120, 240),
     }));
     setOrbs(newOrbs);
   }, []);
@@ -59,7 +59,7 @@ export const BackgroundColored: React.FC = () => {
         return (
           <div
             key={index}
-            className={`absolute rounded-full ${color}`}
+            className={`absolute rounded-full opacity-50 ${color}`}
             style={{
               width: `${size}rem`,
               height: `${size}rem`,

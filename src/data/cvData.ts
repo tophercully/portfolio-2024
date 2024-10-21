@@ -6,8 +6,21 @@ export interface CVData {
 }
 export const cvData: CVData[] = [
   {
+    name: "Productory",
+    link: "https://intheloop-nine.vercel.app/",
+
+    subtitle: "Product Development Suite",
+    when: "Alpha Oct 2024",
+  },
+  {
+    name: "NoiseToNoise",
+    link: "https://noise-to-noise.vercel.app/",
+    subtitle: "Tool to generate noise from audio files",
+    when: "Sep 2024",
+  },
+  {
     name: "Snippp",
-    subtitle: "Light and fast code snippet organizer + social tool",
+    subtitle: "Light and fast code toolkit organizer + social tool",
     link: "https://snippp.io",
     when: "Alpha Jan 2024, Beta July 2024",
   },
