@@ -1,14 +1,14 @@
 import { Project } from "../typeinterfaces";
 
 export default [
-  {
-    name: "Productory",
-    url: "https://intheloop-nine.vercel.app/",
-    image: "/productory.png",
-    projectKey: "productory",
-    desc: "Product Development Suite",
-    role: "Full-Stack Developer",
-  },
+  // {
+  //   name: "Productory",
+  //   url: "https://intheloop-nine.vercel.app/",
+  //   image: "/productory.png",
+  //   projectKey: "productory",
+  //   desc: "Product Development Suite",
+  //   role: "Full-Stack Developer",
+  // },
   {
     name: "NoiseToNoise",
     url: "https://noise-to-noise.vercel.app/",
