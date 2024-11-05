@@ -51,6 +51,7 @@ export default {
         montreal: ['"PP Neue Montreal"', "sans-serif"],
         montrealmono: ['"PP Neue Montreal Mono"', "monotype"],
         neuehaas: ['"Neue Haas Display"', "sans-serif"],
+        overused: ["Overused Grotesk", "sans-serif"],
         satoshi: [
           "Satoshi",
           "Roboto",

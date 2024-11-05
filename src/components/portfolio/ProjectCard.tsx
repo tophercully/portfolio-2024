@@ -10,46 +10,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <a
       href={project.url}
       target={project.url.startsWith("/") ? "" : "_blank"}
-      className="group relative h-fit overflow-hidden rounded-sm bg-white bg-opacity-50 shadow-lg backdrop-blur-lg duration-300 hover:scale-[102%] hover:bg-[#FC4C4E]"
+      className="group relative flex aspect-auto h-full w-full cursor-pointer flex-col overflow-hidden rounded-sm border-b bg-white py-4"
     >
-      <div className="flex flex-col gap-2 p-2">
-        <h3 className="w-full text-xl font-medium text-base-950 duration-200 group-hover:text-base-50">
-          {project.name}
-        </h3>
-
-        <div className="flex items-end justify-between">
-          <p className="w-fit text-sm font-light text-base-950 duration-200 group-hover:text-base-50">
-            {project.role}
-          </p>
-          <p className="w-fit text-xs font-light text-base-950 duration-200 group-hover:text-base-50">
-            {project.desc}
-          </p>
+      <div className="flex h-full w-full gap-8 p-2">
+        {project.logo && (
+          <img
+            src={project.logo}
+            className="h-10 w-10 grayscale filter"
+          />
+        )}
+        <div className="flex flex-col gap-2">
+          <div className="flex items-end gap-4">
+            <h3 className="w-full text-xl font-medium text-base-950 duration-200 group-hover:underline">
+              {project.name}
+            </h3>
+          </div>
+          <div className="flex items-end justify-between">
+            <p className="w-fit text-nowrap text-sm text-base-950 duration-200">
+              {project.desc}
+            </p>
+          </div>
         </div>
       </div>
-      <img
-        src={project.image}
-        alt={project.name}
-        className="h-fit w-fit object-contain transition-transform duration-300"
-      />
-      <div className="absolute inset-0 flex h-full w-full flex-col items-end justify-end p-2 transition-opacity duration-300">
-        {/* <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
-              <h2 className="text-4xl font-bold">{project.name}</h2>
-              {project.subtitle && (
-                <p className="text-sm mt-2">{project.subtitle}</p>
-              )}
-            </div> */}
-        {/* <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center self-end rounded-sm bg-white p-2 text-black opacity-0 transition-opacity duration-300 hover:bg-gray-200 group-hover:opacity-100"
-        >
-          <img
-            src="/opennew.svg"
-            className="invert"
-          />
-        </a> */}
-      </div>
+      <div className="absolute inset-0 flex h-full w-full flex-col items-end justify-end p-2 transition-opacity duration-300"></div>
     </a>
   );
 };

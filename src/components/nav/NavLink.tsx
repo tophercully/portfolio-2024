@@ -6,11 +6,11 @@ interface NavLinkProps {
 export const NavLink: React.FC<NavLinkProps> = ({ url, label }) => {
   return (
     <a
-      className={`flex w-full justify-between gap-2 pt-2 duration-150 ease-in-out hover:m-0 hover:bg-[#1862C8] hover:p-1 hover:pr-4 hover:text-base-50`}
+      className={`group flex w-full justify-between gap-2 py-1 duration-150 ease-in-out hover:bg-base-50 hover:pr-4 hover:invert`}
       href={url}
       target="_blank"
     >
-      <span>{label}</span>
+      <span className="duration-0 group-hover:underline">{label}</span>
       <span className="opacity-25">|</span>
     </a>
   );

@@ -4,25 +4,25 @@ interface NavButtonProps {
   label: string;
 }
 
-export const NavButton: React.FC<NavButtonProps> = ({
-  hoverColor,
-  path,
-  label,
-}) => {
+export const NavButton: React.FC<NavButtonProps> = ({ path, label }) => {
   return (
     <a
-      className={`group flex w-full justify-between gap-2 pt-2 duration-150 ease-in-out hover:m-0 hover:pr-4 hover:bg-[${hoverColor}] hover:p-1`}
+      className={`group flex w-full justify-between gap-2 bg-opacity-50 py-1 pl-2 duration-100 ease-in-out hover:bg-base-100`}
       href={path}
     >
-      <div className="flex w-fit gap-2 duration-150 group-hover:text-base-50">
+      <div className="flex w-fit gap-2 group-hover:text-base-950">
         <span className="duration-0">
           {window.location.pathname == path ? "➤" : "⦾"}
         </span>
-        <span className="duration-0">{label}</span>
+        <span
+          className={`group-hover:underline ${window.location.pathname == path ? "font-medium" : ""}`}
+        >
+          {label}
+        </span>
       </div>
-      <span className="justify-self-end opacity-25 duration-0 group-hover:text-base-50">
+      {/* <span className="justify-self-end opacity-25 group-hover:font-bold group-hover:text-base-950">
         |
-      </span>
+      </span> */}
     </a>
   );
 };

@@ -1,70 +1,83 @@
 import { formatDescription } from "../../util/formatDescription";
+import { NavLink } from "../nav/NavLink";
 
 const ProfileCard = () => {
-  const commonTechTag =
-    "flex justify-center items-center w-fit px-2 py-1 select-none rounded-sm shadow-md text-black dark:text-white";
-
   const bio = `Hi, I'm Chris, a web developer. 
+  
+  I make tools for people, artists, developers, and designers. I write about design, procedural graphics, and web dev.
             
-            I like solving problems, and I'm always looking for new ways to make life easier, faster, and more beautiful.
+  I like solving problems, and I'm always looking for new ways to make life easier, faster, and more beautiful. Aesthetics are important to me, and I believe and understanding of design principles makes for great experiences.
             
-            I've worked in visual media for 11 years, including film production, fashion photography, and graphics programming.`;
+            I make art with code, and I've been a curated artist by Dawn Contemporary and had my work shown at NFC Paris.`;
+
+  const StackCard = ({ label }: { label: string }) => {
+    return (
+      <span
+        className={`flex w-fit select-none items-center justify-center text-nowrap rounded-sm border border-base-500 px-2 py-1 text-black shadow-md`}
+      >
+        {label}
+      </span>
+    );
+  };
 
   return (
-    <div className="flex w-full flex-col gap-4 rounded-sm bg-base-50 p-4 shadow-md dark:bg-base-950 dark:text-base-50">
-      <div className="flex w-full flex-col gap-8 rounded-sm p-4 lg:flex-row lg:gap-10 dark:text-base-50">
-        <div className="relative aspect-square w-full lg:w-96">
-          <img
-            src="https://lh3.googleusercontent.com/a/ACg8ocL9cR86oy7GLrovZC-xZQTnlc1TE88p1Woo8gaIPh14xn2dzb5XjQ=s400-c"
-            className={`h-full w-full rounded-sm object-contain`}
-            alt="Profile"
-            style={{ objectPosition: "top" }}
-          />
-        </div>
+    <div className="font-overused flex w-full max-w-[80ch] flex-col items-center gap-16 rounded-sm pt-8">
+      <div className="flex w-full flex-col gap-8 rounded-sm lg:gap-10">
+        <img
+          src="/pfp.jpg"
+          className={`h-full w-[50vw] self-center rounded-sm object-contain md:w-[20vw] dark:invert`}
+          alt="Profile"
+          style={{ objectPosition: "top" }}
+        />
         <div
           id="allInfo"
-          className="flex h-full flex-1 flex-col justify-between gap-4"
+          className="flex h-full max-w-[80ch] flex-1 flex-col justify-between gap-4 self-center"
         >
           <div className="flex h-full w-full flex-1 flex-grow flex-col gap-4">
             <h1
-              className="text-normal font-montrealmono lg:text-2xl"
+              className="font-overused text-lg font-medium"
               dangerouslySetInnerHTML={{ __html: formatDescription(bio) }}
             ></h1>
           </div>
         </div>
       </div>
-      <div className="mt-8 gap-4 border-t border-dashed border-black p-4 lg:mt-0">
-        <h1 className="text-2xl font-semibold">Stack:</h1>
-        <div className="grid w-full grid-cols-2 gap-4 py-4 lg:flex dark:text-white">
-          <span className={`border border-typescript ${commonTechTag}`}>
-            TypeScript
-          </span>
-          <span
-            className={`border border-javascript ${commonTechTag} text-black`}
-          >
-            JavaScript
-          </span>
-          <span className={`border border-react ${commonTechTag} text-black`}>
-            React.js
-          </span>
-          <span className={`border border-html5 ${commonTechTag}`}>HTML5</span>
-          <span className={`border border-css ${commonTechTag}`}>CSS</span>
-          <span className={`border border-tailwind ${commonTechTag}`}>
-            Tailwind
-          </span>
-          <span className={`border border-nodejs ${commonTechTag}`}>
-            Node.js
-          </span>
-          <span className={`border border-next ${commonTechTag}`}>Next</span>
-          <span className={`border border-p5js ${commonTechTag}`}>p5.js</span>
-          <span className={`border border-threejs ${commonTechTag}`}>
-            three.js
-          </span>
-          <span className={`border border-opengl ${commonTechTag}`}>
-            OpenGL
-          </span>
-          <span className={`border border-cpp ${commonTechTag}`}>C++</span>
-          <span className={`border border-figma ${commonTechTag}`}>Figma</span>
+      <div className="w-full">
+        <h2 className="font-bold">Find me:</h2>
+        <div className="w-full">
+          <NavLink
+            url="mailto:chriswmccully@gmail.com"
+            label="Email"
+          />
+          <NavLink
+            url="https://github.com/tophercully"
+            label="Github"
+          />
+          <NavLink
+            url="https://twitter.com/spinkdinky"
+            label="Twitter"
+          />
+          <NavLink
+            url="https://www.linkedin.com/in/chris-mccully-165042150/"
+            label="LinkedIn"
+          />
+        </div>
+      </div>
+      <div className="gap-4 border-black">
+        <div className="flex w-full max-w-[60ch] grid-cols-2 flex-wrap justify-center gap-4 py-4 lg:flex dark:text-white">
+          <StackCard label="TypeScript" />
+          <StackCard label="JavaScript" />
+          <StackCard label="React.js" />
+          <StackCard label="React Native" />
+          <StackCard label="HTML5" />
+          <StackCard label="CSS" />
+          <StackCard label="Tailwind" />
+          <StackCard label="Node.js" />
+          <StackCard label="Next" />
+          <StackCard label="p5.js" />
+          <StackCard label="three.js" />
+          <StackCard label="OpenGL" />
+          <StackCard label="C++" />
+          <StackCard label="Figma" />
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ export type Project = {
   projectKey: string;
   subtitle?: string;
   role?: string;
+  logo?: string;
 };
 
 export interface ArticleSection {

@@ -6,11 +6,11 @@ export interface CVData {
 }
 export const cvData: CVData[] = [
   {
-    name: "Productory",
-    link: "https://intheloop-nine.vercel.app/",
+    name: "Cocoon",
+    link: "https://cocoontools.chrismccully.com",
 
     subtitle: "Product Development Suite",
-    when: "Alpha Oct 2024",
+    when: "Closed Alpha Oct 2024",
   },
   {
     name: "NoiseToNoise",
