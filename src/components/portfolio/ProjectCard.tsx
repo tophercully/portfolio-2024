@@ -10,7 +10,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <a
       href={project.url}
       target={project.url.startsWith("/") ? "" : "_blank"}
-      className="group relative flex aspect-auto h-full w-full cursor-pointer flex-col overflow-hidden rounded-sm border-b bg-white py-4"
+      className="group relative flex aspect-auto h-full w-full cursor-pointer flex-col overflow-hidden rounded-sm border-b bg-white py-4 md:w-[60ch]"
     >
       <div className="flex h-full w-full gap-8 p-2">
         {project.logo && (
@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </h3>
           </div>
           <div className="flex items-end justify-between">
-            <p className="w-fit text-nowrap text-sm text-base-950 duration-200">
+            <p className="w-fit text-nowrap text-sm text-base-400 duration-200">
               {project.desc}
             </p>
           </div>

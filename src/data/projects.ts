@@ -35,7 +35,7 @@ export default [
     image: "/rebelmint.png",
     logo: "/logos/rmLogo.png",
     projectKey: "rebelmint",
-    desc: "Decentralized Storefronts",
+    desc: "Decentralized Storefronts, no middleman",
     role: "Front-End Developer",
   },
   {
@@ -44,7 +44,7 @@ export default [
     image: "/tapedeck.png",
     logo: "/logos/td.png",
     projectKey: "tapedeck",
-    desc: "Demo",
+    desc: "Demo - Weekly Curated Playlists",
     role: "Front-End Developer",
   },
   {
