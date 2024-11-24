@@ -52,7 +52,7 @@ export default [
     name: "Cocoon",
     url: "https://cocoontools.chrismccully.com",
     blogUrl: "https://blog.chrismccully.com/a/a5549dd33742",
-    image: "/cocoon.png",
+    image: "/cocoonLanding.png",
     logo: "/logos/cocoonLogo.svg",
     projectKey: "cocoon",
     desc: "Cocoon is a product development suite for startups. Ideation, Validation, and Resource Analysis. I've built tools for every step of the product design process, to help prioritize resources",

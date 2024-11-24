@@ -59,7 +59,7 @@ const Modal = ({
         }`}
       >
         <X
-          className="absolute right-0 top-0 h-10 w-10 cursor-pointer rounded-tr-xl p-2 hover:bg-gray-100"
+          className="absolute right-1 top-1 h-10 w-10 cursor-pointer rounded-tr-sm p-2 hover:bg-gray-100"
           onClick={onClose}
         />
         {children}

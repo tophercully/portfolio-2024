@@ -619,6 +619,22 @@ video {
   top: 0px;
 }
 
+.right-2 {
+  right: 0.5rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.right-1 {
+  right: 0.25rem;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -1093,6 +1109,18 @@ video {
 
 .rounded-tr-xl {
   border-top-right-radius: 0.75rem;
+}
+
+.rounded-tr-md {
+  border-top-right-radius: 0.375rem;
+}
+
+.rounded-tr-lg {
+  border-top-right-radius: 0.5rem;
+}
+
+.rounded-tr-sm {
+  border-top-right-radius: 0.125rem;
 }
 
 .border {
