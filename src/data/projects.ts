@@ -22,11 +22,11 @@ export default [
   {
     name: "Snippp.io",
     url: "https://snippp.io",
-    blogUrl: "/portfolio/snippp",
+    blogUrl: "https://blog.chrismccully.com/a/6465a73aca4d",
     image: "/snippets.png",
     logo: "/logos/snipppLogo.svg",
     projectKey: "snippp",
-    desc: "Snippp is an open-source tool for sharing code toolkits and snippets. Built as a resource for both learning and established developers.",
+    desc: `Snippp is an open-source resource for sharing code toolkits and snippets. Use it to find components, trigonimetric functions, hash functions, and more.`,
     role: "Founder, Full-Stack Developer",
     date: "Jan 2024 - Present",
     stack: [
@@ -39,9 +39,20 @@ export default [
     ],
   },
   {
+    name: "tapedeck.",
+    url: "https://tapedeck-one.vercel.app/",
+    image: "/tapedeck.png",
+    logo: "/logos/td.png",
+    projectKey: "tapedeck",
+    desc: "A demo landing page scroll interaction built for 'tapedeck.'",
+    role: "Front-End Developer",
+    stack: ["Javascript", "React.js", "CSS", "Spotify API"],
+  },
+  {
     name: "Cocoon",
     url: "https://cocoontools.chrismccully.com",
-    image: "/cocoonResults.png",
+    blogUrl: "https://blog.chrismccully.com/a/a5549dd33742",
+    image: "/cocoon.png",
     logo: "/logos/cocoonLogo.svg",
     projectKey: "cocoon",
     desc: "Cocoon is a product development suite for startups. Ideation, Validation, and Resource Analysis. I've built tools for every step of the product design process, to help prioritize resources",
@@ -57,14 +68,16 @@ export default [
       "Express",
     ],
   },
+
   {
     name: "NoiseToNoise",
     url: "https://noise-to-noise.vercel.app/",
     image: "/noisetonoise.png",
     logo: "/logos/ntnLogo.svg",
     projectKey: "noisetonoise",
-    desc: "Audio to Noise Generator",
+    desc: "Audio to Noise Generator as an alternative to algorithmic noise like Perlin or Simplex",
     role: "Full-Stack Developer",
+    stack: ["Typescript", "React.js", "CSS/Tailwind", "Canvas API"],
   },
   {
     name: "RebelMint",
@@ -72,18 +85,10 @@ export default [
     image: "/rebelmint.png",
     logo: "/logos/rmLogo.png",
     projectKey: "rebelmint",
-    desc: "Decentralized Storefronts, no middleman",
+    desc: "Founding front-end developer on the project, I've built the base component which can be installed via npm to host an instance in any React application. I've also built the front-end for the main site, including tools to help manage file uploads and metadata so listings products is easy.",
     role: "Front-End Developer",
   },
-  {
-    name: "tapedeck.",
-    url: "https://tapedeck-one.vercel.app/",
-    image: "/tapedeck.png",
-    logo: "/logos/td.png",
-    projectKey: "tapedeck",
-    desc: "Demo - Weekly Curated Playlists",
-    role: "Front-End Developer",
-  },
+
   {
     name: "EtherEthos",
     url: "https://etherethos.com",
@@ -92,6 +97,7 @@ export default [
     projectKey: "rebelmint",
     desc: "Profile standardization for web3",
     role: "Front-End Developer",
+    stack: ["Javascript", "HTML", "CSS/Tailwind", "Web3.js"],
   },
   // {
   //   name: "WIC",
@@ -112,7 +118,7 @@ export default [
     image: "ligare.png",
     url: "https://www.fxhash.xyz/generative/slug/ligare/explore-params?fxhash=oo5gvE68r93RXx3eAcCuqcnTR5jETG2XfTBnChDMEP1GqzJU5Nu#0x40ac18000000000040b4e900000000000140218f5c28f5c28f4074000000000000401400000000000040330000000000003ff73333333333333fff851eb851eb8540055c28f5c28f5c3ff0000000000000",
     projectKey: "ligare",
-    desc: "Interactive Generative Algorithm",
+    desc: "Interactive Generative Algorithm built for fxhash. This project generates a plottable SVG which can then be bought and used by the user to create the image IRL.",
     role: "Developer",
   },
   {

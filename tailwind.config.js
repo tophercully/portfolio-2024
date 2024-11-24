@@ -4,6 +4,10 @@ export default {
   theme: {
     extend: {
       keyframes: {
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
         float: {
           "0%, 100%": { transform: "translate(var(--startX), var(--startY))" },
           "50%": { transform: "translate(var(--endX), var(--endY))" },
@@ -11,6 +15,7 @@ export default {
       },
       animation: {
         float: "float 40s ease-in-out infinite",
+        "fade-in": "fade-in 0.5s ease-out",
       },
       colors: {
         base: {

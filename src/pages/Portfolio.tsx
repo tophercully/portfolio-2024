@@ -1,10 +1,5 @@
 import React from "react";
-import projects from "../data/projects";
 import { Header } from "../components/nav/Header";
-import ProfileCard from "../components/global/ProfileCard";
-import { NavLink } from "../components/nav/NavLink";
-import PortfolioCarousel from "../components/portfolio/PortfolioCarousel";
-import ProjectList from "../components/portfolio/ProjectList";
 import PortfolioMasonry from "../components/portfolio/PortfolioMasonry";
 
 const Portfolio: React.FC = () => {

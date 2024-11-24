@@ -1,6 +1,7 @@
 export type Project = {
   name: string;
   url: string;
+  blogUrl?: string;
   image: string;
   desc: string;
   projectKey: string;

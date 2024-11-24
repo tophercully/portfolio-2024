@@ -22,7 +22,7 @@ const ProfileCard = () => {
   };
 
   return (
-    <div className="relative flex h-fit w-fit max-w-[100ch] flex-col items-center justify-center rounded-sm font-overused">
+    <div className="animate-fade-in relative flex h-full min-h-screen w-fit max-w-[100ch] flex-col items-center justify-center rounded-sm font-overused">
       <div className="flex w-full flex-col gap-8 rounded-sm md:flex-row lg:gap-10">
         <img
           src="/unnamed.jpg"
@@ -43,13 +43,13 @@ const ProfileCard = () => {
         </div>
       </div>
 
-      {/* <div className="gap-4 border-black">
+      <div className="gap-4 border-black">
         <div className="flex w-full max-w-[60ch] grid-cols-2 flex-wrap justify-center gap-4 py-4 lg:flex dark:text-white">
           <StackCard label="TypeScript" />
           <StackCard label="JavaScript" />
           <StackCard label="React.js" />
           <StackCard label="React Native" />
-          <StackCard label="HTML5" />
+          <StackCard label="HTML" />
           <StackCard label="CSS" />
           <StackCard label="Tailwind" />
           <StackCard label="Node.js" />
@@ -60,7 +60,7 @@ const ProfileCard = () => {
           <StackCard label="C++" />
           <StackCard label="Figma" />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

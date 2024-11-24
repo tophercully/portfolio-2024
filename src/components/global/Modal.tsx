@@ -54,7 +54,7 @@ const Modal = ({
       onMouseDown={handleOutsideClick}
     >
       <div
-        className={`relative flex max-h-[90vh] w-full max-w-[60ch] flex-col gap-6 overflow-y-auto rounded-xl bg-white shadow-xl transition-all duration-300 ease-in-out ${contentClassName} ${
+        className={`relative flex max-h-[90vh] w-full max-w-[60ch] flex-col gap-6 overflow-y-auto rounded-md bg-white shadow-xl transition-all duration-300 ease-in-out ${contentClassName} ${
           isAnimating ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
         }`}
       >
