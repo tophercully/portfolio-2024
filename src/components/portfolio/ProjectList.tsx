@@ -8,10 +8,10 @@ type ProjectListProps = {
 
 const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
   return (
-    <div className="mb-12">
+    <div className="max-w-screen mb-12">
       <div
         style={{ columns: 3 }}
-        className="flex w-full max-w-[60ch] flex-col gap-4"
+        className="flex w-full flex-col gap-12"
       >
         {projects.map((project) => (
           <ProjectCard

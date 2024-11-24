@@ -1,49 +1,79 @@
-import React, { useState, ReactNode, useRef, useEffect } from "react";
+import { ChevronLeft } from "lucide-react";
+import React, { useState, useEffect, useRef } from "react";
 
-interface AccordionItemProps {
-  title: string;
-  children: ReactNode;
-  startOpen?: boolean;
+interface DrawerProps {
+  label: string;
+  children: React.ReactNode;
+  defaultOpen?: boolean;
+  rounded?: "top" | "bottom" | "both" | false;
+  sub?: boolean;
+  contentClassName?: string;
 }
 
-const AccordionItem: React.FC<AccordionItemProps> = ({
-  title,
+const Accordion: React.FC<DrawerProps> = ({
+  label,
   children,
-  startOpen,
+  defaultOpen = false,
+  rounded = false,
+  sub = false,
+  contentClassName = "",
 }) => {
-  const [isOpen, setIsOpen] = useState(startOpen ? startOpen : false);
+  const [isOpen, setIsOpen] = useState(defaultOpen);
   const contentRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState<number | undefined>(0);
+  const floatingContent =
+    !contentClassName?.includes("bg") ||
+    !contentClassName?.includes("border") ||
+    !contentClassName?.includes("ring");
 
   useEffect(() => {
-    if (isOpen) {
-      const contentEl = contentRef.current;
-      setHeight(contentEl?.scrollHeight);
-    } else {
-      setHeight(0);
+    if (defaultOpen && contentRef.current) {
+      contentRef.current.style.height = `${contentRef.current.scrollHeight}px`;
     }
-  }, [isOpen]);
+  }, [defaultOpen]);
+
+  useEffect(() => {
+    if (isOpen && contentRef.current) {
+      contentRef.current.style.height = `${contentRef.current.scrollHeight}px`;
+    }
+  }, [children, isOpen]);
+
+  const toggleDrawer = () => {
+    if (contentRef.current) {
+      if (isOpen) {
+        contentRef.current.style.height = "0px";
+      } else {
+        contentRef.current.style.height = `${contentRef.current.scrollHeight}px`;
+      }
+      setIsOpen(!isOpen);
+    }
+  };
 
   return (
-    <div className="border-b border-dashed border-black bg-white bg-opacity-15">
-      <button
-        className="flex w-full items-center justify-between px-6 py-4 text-left"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <span className="font-medium">{title}</span>
-        <span
-          className={`transform transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-        >
-          ▼
-        </span>
-      </button>
+    <div
+      className={`h-fit w-full overflow-hidden ${rounded == "top" || rounded == "both" ? "rounded-t-xl" : ""} ${(rounded == "bottom" || rounded == "both") && (!isOpen || floatingContent) ? "rounded-b-xl" : ""}`}
+    >
       <div
-        className="overflow-hidden transition-[height] duration-100 ease-in-out"
-        style={{ height: height }}
+        className={`flex cursor-pointer items-center justify-between bg-white py-4`}
+        onClick={toggleDrawer}
+      >
+        <span className={` ${sub ? "text-lg" : "text-xl"}`}>{label}</span>
+        <span
+          className={`transform text-base-300 transition-transform duration-300 ${
+            isOpen ? "-rotate-90" : "rotate-0"
+          }`}
+        >
+          <ChevronLeft />
+        </span>
+      </div>
+      <div
+        ref={contentRef}
+        style={{
+          height: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
+        }}
+        className="transition-height overflow-hidden duration-300 ease-in-out"
       >
         <div
-          ref={contentRef}
-          className="px-6 pb-4"
+          className={`flex flex-col ${contentClassName} ${(rounded == "bottom" || rounded == "both") && isOpen && !floatingContent ? "rounded-b-xl" : ""}`}
         >
           {children}
         </div>
@@ -52,16 +82,4 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   );
 };
 
-interface AccordionProps {
-  children: ReactNode;
-}
-
-const Accordion: React.FC<AccordionProps> = ({ children }) => {
-  return (
-    <div className="w-full rounded-sm border border-gray-200 shadow-md">
-      {children}
-    </div>
-  );
-};
-
-export { Accordion, AccordionItem };
+export default Accordion;

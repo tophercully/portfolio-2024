@@ -8,7 +8,7 @@ export const CVItem: React.FC<CVItemProps> = ({ project }) => {
   const { name, link, when, subtitle } = project;
   return (
     <a
-      className={`font-overused flex w-full flex-col justify-start border-b bg-base-50 bg-opacity-15 py-2 pl-1 duration-75 ease-in-out hover:bg-blue-500 hover:text-base-50 lg:flex-row lg:gap-12 dark:hover:bg-amber-500 dark:hover:text-base-950`}
+      className={`flex w-full flex-col justify-start border-b bg-base-50 bg-opacity-15 py-2 pl-1 font-overused duration-75 ease-in-out hover:bg-blue-600 hover:text-base-50 lg:flex-row lg:gap-12`}
       href={link}
       target="_blank"
     >

@@ -7,6 +7,8 @@ export type Project = {
   subtitle?: string;
   role?: string;
   logo?: string;
+  date?: string;
+  stack?: string[];
 };
 
 export interface ArticleSection {
