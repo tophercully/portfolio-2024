@@ -6,11 +6,25 @@ export interface CVData {
 }
 export const cvData: CVData[] = [
   {
+    name: "Ipsum Else",
+    link: "https://ipsums.chrismccully.com",
+
+    subtitle: "Rich filler text database and API",
+    when: "Dec 2024",
+  },
+  {
     name: "Cocoon",
     link: "https://cocoontools.chrismccully.com",
 
     subtitle: "Product Development Suite",
     when: "Closed Alpha Oct 2024",
+  },
+  {
+    name: "Hexpaint",
+    link: "https://hexpaint.chrismccully.com",
+
+    subtitle: "Paint-matching tool for designers",
+    when: "Oct 2024",
   },
   {
     name: "NoiseToNoise",
