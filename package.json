@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run dev:vite\" \"npm run dev:tailwind\" \"npm run dev:vercel\"",
+    "dev": "concurrently \"npm run dev:vite\" \"npm run dev:tailwind\"",
     "dev:vite": "vite",
     "dev:tailwind": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "dev:vercel": "vercel dev",

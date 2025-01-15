@@ -9,16 +9,8 @@ import About from "./pages/About.tsx";
 
 import SnipppWriteup from "./pages/projects/SnipppWriteup.tsx";
 import { CV } from "./pages/CVPage.tsx";
+import BrandPage from "./pages/BrandPage.tsx";
 const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element: (
-  //     <>
-  //       <Background />
-  //       <App />
-  //     </>
-  //   ),
-  // },
   {
     path: "/",
     element: <Portfolio />,
@@ -35,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/brand/:projectId?",
+    element: <BrandPage />,
   },
 ]);
 

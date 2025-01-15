@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       <div className="flex w-full justify-center p-4">
         <img
           src={project.image}
-          className="max-h-[30svh] max-w-[66%] rounded-md object-contain shadow-md duration-[400ms] ease-in-out group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-purple-100"
+          className="max-h-[30svh] max-w-[66%] rounded-md bg-base-100 object-contain shadow-md duration-[400ms] ease-in-out group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-purple-100"
         />
       </div>
       <div className="absolute bottom-0 flex w-full flex-col gap-8 p-6">

@@ -10,7 +10,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="flex w-full flex-col gap-2 font-overused text-sm lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+    <div className="z-50 flex w-full flex-col gap-2 font-overused text-sm lg:flex-row lg:items-center lg:justify-between lg:gap-8">
       <div className="flex w-full items-center justify-between lg:w-auto">
         <a
           className="text-3xl font-thin hover:bg-[#FC4C4E] hover:text-base-50"
