@@ -21,7 +21,7 @@ export default [
   // },
   {
     name: "Cocoon",
-    url: "https://cocoontools.chrismccully.com",
+    url: "https://cocoon.tools",
     blogUrl: "https://blog.chrismccully.com/a/a5549dd33742",
     image: "/cocoonLanding.png",
     logo: "/logos/cocoonLogo.svg",
