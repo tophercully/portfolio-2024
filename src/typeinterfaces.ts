@@ -2,6 +2,7 @@ export type Project = {
   name: string;
   url: string;
   blogUrl?: string;
+  brandingUrl?: string;
   image: string;
   desc: string;
   projectKey: string;

@@ -1,7 +1,7 @@
 import Modal from "../global/Modal";
 
 import { Project } from "../../typeinterfaces";
-import { ArrowUpRightFromSquare, BookOpenText } from "lucide-react";
+import { ArrowUpRightFromSquare, BookOpenText, Notebook } from "lucide-react";
 import React from "react";
 
 type ProjectModalProps = {
@@ -11,7 +11,7 @@ type ProjectModalProps = {
 };
 
 const ProjectModal = ({ project, open, onClose }: ProjectModalProps) => {
-  const { name, desc, image, url, blogUrl, stack } = project;
+  const { name, desc, image, url, blogUrl, brandingUrl, stack } = project;
   return (
     <Modal
       open={open}
@@ -41,12 +41,12 @@ const ProjectModal = ({ project, open, onClose }: ProjectModalProps) => {
             ))}
           </div>
         )}
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <a
             href={url}
             target={url && url.startsWith("/") ? "" : "_blank"}
             rel="noreferrer"
-            className="flex items-center gap-2 rounded border border-base-500 bg-base-50 px-4 py-2 invert"
+            className="flex items-center gap-2 text-nowrap rounded border border-base-500 bg-base-50 px-4 py-2 invert hover:bg-base-150"
           >
             <ArrowUpRightFromSquare size={16} />
             Visit site
@@ -56,10 +56,21 @@ const ProjectModal = ({ project, open, onClose }: ProjectModalProps) => {
               href={blogUrl}
               target={blogUrl && blogUrl.startsWith("/") ? "" : "_blank"}
               rel="noreferrer"
-              className="flex items-center gap-2 rounded border border-base-500 px-4 py-2"
+              className="flex items-center gap-2 text-nowrap rounded border border-base-500 px-4 py-2 hover:bg-base-150"
             >
               <BookOpenText size={16} />
               Read About It
+            </a>
+          )}
+          {brandingUrl && (
+            <a
+              href={brandingUrl}
+              target={"_blank"}
+              rel="noreferrer"
+              className="flex items-center gap-2 text-nowrap rounded border border-base-500 px-4 py-2 hover:bg-base-150"
+            >
+              <Notebook size={16} />
+              Branding and Design Guidelines
             </a>
           )}
         </div>

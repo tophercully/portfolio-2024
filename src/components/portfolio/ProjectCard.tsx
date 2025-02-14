@@ -40,10 +40,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
           )}
           {project.blogUrl && (
             <a
-              href={project.url}
+              href={project.blogUrl}
               className="sr-only"
             >
               Read about {project.name}
+            </a>
+          )}
+          {project.brandingUrl && (
+            <a
+              href={project.brandingUrl}
+              className="sr-only"
+            >
+              Branding and Design Guidelines
             </a>
           )}
         </div>
