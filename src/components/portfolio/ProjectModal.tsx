@@ -23,7 +23,7 @@ const ProjectModal = ({ project, open, onClose }: ProjectModalProps) => {
           alt={name}
           className="max-h-[33svh] w-fit self-center rounded-md border border-base-150 object-contain shadow-lg"
         />
-        <p className="flex flex-col gap-8 font-light">
+        <p className="flex flex-col gap-8 whitespace-pre-line font-light">
           {desc.split(/<br\s*\/?>/i).map((line, index) => (
             <React.Fragment key={index}>{line}</React.Fragment>
           ))}

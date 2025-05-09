@@ -1,24 +1,6 @@
 import { Project } from "../typeinterfaces";
 
 export default [
-  // {
-  //   name: "FlashMate",
-  //   // url: "https://cocoontools.chrismccully.com",
-  //   image: "/cocoonLanding.png",
-  //   logo: "/logos/cocoonLogo.svg",
-  //   projectKey: "flashmate",
-  //   desc: `I was hired to develop the newly designed front-end and redesign the core feature screens. Flashmate uses graduated interval recall to help users remember information. `,
-  //   role: "Front-End Developer",
-  //   date: "Aug 2024 - Nov 2024",
-  //   stack: [
-  //     "Typescript",
-  //     "React Native",
-  //     "CSS",
-  //     "Google Cloud Platform",
-  //     "Firebase/Firestore",
-  //     "RevenueCat",
-  //   ],
-  // },
   {
     name: "Cocoon",
     url: "https://cocoon.tools",
@@ -33,11 +15,13 @@ export default [
     stack: [
       "Typescript",
       "React.js",
+      "Next.js",
       "CSS/Tailwind",
-      "Google Cloud Platform",
-      "Firebase/Firestore",
-      "Node.js",
-      "Express",
+      "Postgres",
+      "Hono",
+      "Bun",
+      "Railway",
+      "Tensorflow",
     ],
   },
   {
@@ -54,6 +38,7 @@ export default [
     stack: [
       "TypeScript",
       "React.js",
+      "Next.js",
       "TailwindCSS",
       "PostgreSQL",
       "NeonDB",
@@ -61,22 +46,44 @@ export default [
     ],
   },
   {
-    name: "FlashMate",
-    url: "https://flashmate.app",
-    image: "/flashmate.svg",
-    projectKey: "flashmate",
-    desc: `FlashMate is a memorization, education, and flashcard app. It uses graduated interval recall to help users remember information, and has a continuously updated library of lessons created by educators and professionals.`,
-    role: "Front-End Developer, Design Team",
+    name: "Rowt (in Alpha)",
+    url: "https://rowt.app",
+    image: "/rowtLanding.png",
+    logo: "/logos/rowt.svg",
+    projectKey: "rowt",
+    desc: `Open-Source deep linking and analytics for React Native apps. (WIP)`,
+    role: "Full-Stack Developer",
     date: "Sept 2024 - Present",
     stack: [
-      "TypeScript",
-      "React Native",
-      "Ruby on Rails",
-      "Firebase",
-      "Google Cloud Platform",
-      "RevenueCat",
+      "Typescript",
+      "Nest.js",
+      "Next.js",
+      "CSS/Tailwind",
+      "Firebase/Firestore",
+      "Node.js",
     ],
   },
+  {
+    name: "RebelMint",
+    url: "https://rebelmint.org",
+    image: "/rebelmint.png",
+    logo: "/logos/rmLogo.png",
+    projectKey: "rebelmint",
+    desc: `Founding front-end developer on the project, Rebelmint is an open-source and free method to create storefronts on web3 and host them in your React app. 
+    
+    I've built the base component which can be installed via npm to host an instance in any React application. I've also built the front-end for the main site, including tools to help manage file uploads and metadata so listings products is easy.`,
+    role: "Front-End Developer",
+    stack: [
+      "TypeScript",
+      "HTML",
+      "Vite",
+      "React.js",
+      "npm",
+      "CSS/Tailwind",
+      "Web3Modal",
+    ],
+  },
+
   {
     name: "tapedeck.",
     url: "https://tapedeck-one.vercel.app/",
@@ -98,16 +105,6 @@ export default [
     role: "Full-Stack Developer",
     stack: ["Typescript", "React.js", "CSS/Tailwind", "Canvas API"],
   },
-  {
-    name: "RebelMint",
-    url: "https://rebelmint.org",
-    image: "/rebelmint.png",
-    logo: "/logos/rmLogo.png",
-    projectKey: "rebelmint",
-    desc: "Founding front-end developer on the project, I've built the base component which can be installed via npm to host an instance in any React application. I've also built the front-end for the main site, including tools to help manage file uploads and metadata so listings products is easy.",
-    role: "Front-End Developer",
-    stack: ["TypeScript", "HTML", "CSS/Tailwind", "Web3Modal"],
-  },
 
   {
     name: "EtherEthos",
@@ -119,20 +116,23 @@ export default [
     role: "Front-End Developer",
     stack: ["Javascript", "HTML", "CSS/Tailwind", "Web3.js"],
   },
-  // {
-  //   name: "WIC",
-  //   url: "https://weather-app-pink-xi.vercel.app/",
-  //   image: "/weather.png",
-  //   projectKey: "wic",
-  //   desc: "Website",
-  // },
-  // {
-  //   name: "What's For Lunch",
-  //   url: "https://whattoeat-react.vercel.app/",
-  //   image: "/whattoeat.png",
-  //   projectKey: "wfl",
-  //   desc: "Website",
-  // },
+  {
+    name: "FlashMate",
+    url: "https://flashmate.app",
+    image: "/flashmate.svg",
+    projectKey: "flashmate",
+    desc: `FlashMate is a memorization, education, and flashcard app. It uses graduated interval recall to help users remember information, and has a continuously updated library of lessons created by educators and professionals.`,
+    role: "Front-End Developer, Design Team",
+    date: "Sept 2024 - Present",
+    stack: [
+      "TypeScript",
+      "React Native",
+      "Ruby on Rails",
+      "Firebase",
+      "Google Cloud Platform",
+      "RevenueCat",
+    ],
+  },
   {
     name: "Ligare",
     image: "ligare.png",
@@ -170,24 +170,4 @@ export default [
     role: "Artist, Developer",
     stack: ["Javascript", "CSS", "HTML", "p5.js", "GLSL"],
   },
-  // {
-  //     name: 'Immure',
-  //     url: 'https://www.fxhash.xyz/generative/slug/immure'
-  // },
-  // {
-  //     name: 'Attractor',
-  //     url: 'https://www.fxhash.xyz/generative/22785'
-  // },
-  // {
-  //     name: 'ALIYE',
-  //     url: 'https://www.fxhash.xyz/generative/29610'
-  // },
-  // {
-  //     name: 'A Pile, To Be Sorted',
-  //     url: 'https://www.fxhash.xyz/generative/29312'
-  // },
-  // {
-  //     name: 'Crash Euphoria',
-  //     url: 'https://www.fxhash.xyz/generative/20120'
-  // },
 ] as Project[];
