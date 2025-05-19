@@ -6,18 +6,38 @@ export interface CVData {
 }
 export const cvData: CVData[] = [
   {
-    name: "Ipsum Else",
-    link: "https://ipsums.chrismccully.com",
+    name: "Rowt",
+    link: "https://console.rowt.app",
 
-    subtitle: "Rich filler text database and API",
-    when: "Dec 2024",
+    subtitle: "Deep linking and analytics for React Native apps",
+    when: "May 2025",
   },
   {
     name: "Cocoon",
     link: "https://cocoontools.chrismccully.com",
 
     subtitle: "Product Development Suite",
-    when: "Closed Alpha Oct 2024",
+    when: "April 2025",
+  },
+  {
+    name: "RebelMint",
+    subtitle: "Open-source shop creation tool for Base",
+    link: "https://rebelmint.org/",
+    when: "Beta Jun 2024, Live Apr 2025",
+  },
+  {
+    name: "FlashMate",
+    link: "https://flashmate.app",
+
+    subtitle: "Graduated memory recall tool",
+    when: "Feb 2025",
+  },
+  {
+    name: "Ipsum Else",
+    link: "https://ipsums.chrismccully.com",
+
+    subtitle: "Rich filler text database and API",
+    when: "Dec 2024",
   },
   {
     name: "Hexpaint",
@@ -37,12 +57,6 @@ export const cvData: CVData[] = [
     subtitle: "Light and fast code toolkit organizer + social tool",
     link: "https://snippp.io",
     when: "Alpha Jan 2024, Beta July 2024",
-  },
-  {
-    name: "RebelMint",
-    subtitle: "Open-source shop creation tool for Base",
-    link: "https://rebelmint.org/",
-    when: "Jun 2024",
   },
   {
     name: "EtherEthos",
