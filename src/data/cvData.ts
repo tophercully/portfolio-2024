@@ -6,6 +6,14 @@ export interface CVData {
 }
 export const cvData: CVData[] = [
   {
+    name: "'Trending On Google' API",
+    link: "https://rapidapi.com/super-duper-super-duper-default/api/google-trends-scraper1",
+
+    subtitle:
+      "Live data scraped from Google Trends, including all search terms",
+    when: "May 2025",
+  },
+  {
     name: "Rowt",
     link: "https://console.rowt.app",
 
